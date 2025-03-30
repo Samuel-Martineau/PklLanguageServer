@@ -49,7 +49,11 @@ jobs:
       - name: Build Project
         run: |
           ./generate_resources
-          swift build -v
+          if [[ ${{ runner.os }} == "Linux" ]]; then
+            swift build -v -c release --static-swift-stdlib
+          else
+            swift build -v -c release
+          fi
 
       - name: Run Tests
         run: |
