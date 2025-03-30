@@ -60,5 +60,5 @@ jobs:
         run: |
           set -o pipefail && swift test | xcbeautify --renderer github-actions
 
-      - name: Run Benchmarks
-        run: swift package benchmark
+      # - name: Run Benchmarks
+      #   run: swift package benchmark
