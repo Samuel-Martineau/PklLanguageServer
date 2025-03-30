@@ -59,7 +59,10 @@ jobs:
       - name: Run Tests
         run: |
           set -o pipefail && swift test | xcbeautify --renderer github-actions
+      
+      - name: test
+        run: ls -la
 
       - uses: actions/upload-artifact@v4
         with:
-          path: .
+          path: .build
