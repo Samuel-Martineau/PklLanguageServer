@@ -60,5 +60,6 @@ jobs:
         run: |
           set -o pipefail && swift test | xcbeautify --renderer github-actions
 
-      # - name: Run Benchmarks
-      #   run: swift package benchmark
+      - uses: actions/upload-artifact@v4
+        with:
+          path: .
