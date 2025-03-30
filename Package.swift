@@ -25,8 +25,8 @@ let package = Package(
         // Pkl Tree Sitter
         .package(url: "https://github.com/apple/tree-sitter-pkl", revision: "main"),
 
-        // Benchmarking
-        .package(url: "https://github.com/ordo-one/package-benchmark", .upToNextMajor(from: "1.22.4")),
+        // // Benchmarking
+        // .package(url: "https://github.com/ordo-one/package-benchmark", .upToNextMajor(from: "1.22.4")),
     ],
 
     targets: [
