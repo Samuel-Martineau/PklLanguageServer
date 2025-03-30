@@ -70,18 +70,18 @@ let package = Package(
             ]
         ),
         // Benchmark of PklLSPBenchmark
-        .executableTarget(
-            name: "PklLSPBenchmark",
-            dependencies: [
-                .product(name: "Benchmark", package: "package-benchmark"),
-                "pkl-lsp",
-                .product(name: "SwiftTreeSitterLayer", package: "SwiftTreeSitter"),
-                .product(name: "TreeSitterPkl", package: "tree-sitter-pkl"),
-            ],
-            path: "Benchmarks/PklLSPBenchmark",
-            plugins: [
-                .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
-            ]
-        ),
+        // .executableTarget(
+        //     name: "PklLSPBenchmark",
+        //     dependencies: [
+        //         .product(name: "Benchmark", package: "package-benchmark"),
+        //         "pkl-lsp",
+        //         .product(name: "SwiftTreeSitterLayer", package: "SwiftTreeSitter"),
+        //         .product(name: "TreeSitterPkl", package: "tree-sitter-pkl"),
+        //     ],
+        //     path: "Benchmarks/PklLSPBenchmark",
+        //     plugins: [
+        //         .plugin(name: "BenchmarkPlugin", package: "package-benchmark"),
+        //     ]
+        // ),
     ]
 )
