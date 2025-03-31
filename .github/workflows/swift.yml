@@ -12,7 +12,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-22.04, macos-13]
+        os: [ubuntu-22.04]
     steps:
       - uses: actions/checkout@v3
         with:
@@ -59,10 +59,8 @@ jobs:
       - name: Run Tests
         run: |
           set -o pipefail && swift test | xcbeautify --renderer github-actions
-      
-      - name: test
-        run: ls -la
 
       - uses: actions/upload-artifact@v4
         with:
-          path: ./.build
+          path: .build
+          include-hidden-files: true
